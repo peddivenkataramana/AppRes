@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://peddivenkataramana.github.io/AppRes",
   "dependencies": {
     "@headlessui/react": "^2.1.8",
     "@heroicons/react": "^2.1.5",
@@ -14,8 +15,7 @@
     "react-icons": "^5.3.0",
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "homepage": "https://peddivenkataramana.github.io/AppRes"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
