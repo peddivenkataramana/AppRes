@@ -3,54 +3,78 @@ import "./PhotoGrid.css"; // Ensure this file exists
 
 const photos = [
   {
-    id: 1,
-    src: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
-    alt: "Description 1",
-  },
-  {
-    id: 2,
-    src: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
-    alt: "Description 2",
-  },
-  {
     id: 3,
-    src: "https://images.unsplash.com/photo-1517841905240-47298e151d61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
-    alt: "Description 3",
-  },
-  {
-    id: 4,
-    src: "https://images.unsplash.com/photo-1494042062061-7e5a3b5c74e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
-    alt: "Description 4",
+    src: "https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    alt: "Aloo Gobi",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1555685812-10a3c3f29c1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
-    alt: "Description 5",
+    src: "https://images.pexels.com/photos/1662610/pexels-photo-1662610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    alt: "Paneer Tikka",
   },
-  // Add more photos as needed
+  {
+    id: 6,
+    src: "https://images.pexels.com/photos/2020252/pexels-photo-2020252.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    alt: "Biryani",
+  },
+  {
+    id: 7,
+    src: "https://images.pexels.com/photos/1033185/pexels-photo-1033185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    alt: "Dhokla",
+  },
+  {
+    id: 8,
+    src: "https://images.pexels.com/photos/3639636/pexels-photo-3639636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    alt: "Samosa",
+  },
+  {
+    id: 9,
+    src: "https://images.pexels.com/photos/4200704/pexels-photo-4200704.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    alt: "Dal Makhani",
+  },
+  {
+    id: 11,
+    src: "https://images.pexels.com/photos/3553885/pexels-photo-3553885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    alt: "Gulab Jamun",
+  },
+  {
+    id: 12,
+    src: "https://images.pexels.com/photos/4338465/pexels-photo-4338465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    alt: "Kheer",
+  },
+  {
+    id: 13,
+    src: "https://images.pexels.com/photos/3661796/pexels-photo-3661796.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    alt: "Lassi",
+  },
+  {
+    id: 14,
+    src: "https://images.pexels.com/photos/2176980/pexels-photo-2176980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    alt: "Chaat",
+  },
+  {
+    id: 15,
+    src: "https://images.pexels.com/photos/4245568/pexels-photo-4245568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    alt: "Pav Bhaji",
+  },
 ];
 
 const SectionTwo = () => {
   return (
     <div className="relative overflow-hidden my-10 px-4">
-      {" "}
-      {/* Added vertical margin and horizontal padding */}
       <h2 className="text-3xl font-bold text-center mb-10">
         Explore Our Culinary Delights
-      </h2>{" "}
-      {/* Increased bottom margin */}
+      </h2>
       <div className="flex animate-slide min-h-[250px] justify-center py-4">
-        {" "}
-        {/* Added vertical padding */}
         {photos.map((photo) => (
           <div
             key={photo.id}
-            className="photo-card transform transition-transform duration-500 hover:scale-105 mx-4" // Increased horizontal margin for spacing
+            className="photo-card transform transition-transform duration-500 hover:scale-105 mx-4"
           >
             <img
               src={photo.src}
               alt={photo.alt}
-              className="w-48 h-48 object-cover rounded-lg mb-3" // Added bottom margin to images
+              className="w-48 h-48 object-cover rounded-lg mb-3"
             />
             <div className="p-3">
               <h3 className="text-lg font-semibold">{photo.alt}</h3>
@@ -61,12 +85,12 @@ const SectionTwo = () => {
         {photos.map((photo) => (
           <div
             key={photo.id + 100} // Unique key
-            className="photo-card transform transition-transform duration-500 hover:scale-105 mx-4" // Increased horizontal margin for spacing
+            className="photo-card transform transition-transform duration-500 hover:scale-105 mx-4"
           >
             <img
               src={photo.src}
               alt={photo.alt}
-              className="w-48 h-48 object-cover rounded-lg mb-3" // Added bottom margin to images
+              className="w-48 h-48 object-cover rounded-lg mb-3"
             />
             <div className="p-3">
               <h3 className="text-lg font-semibold">{photo.alt}</h3>
