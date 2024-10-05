@@ -25,7 +25,7 @@ const SectionThree = () => {
         </p>
         <div className="text-center mb-4">
           <img
-            src="https://images.unsplash.com/photo-1555685812-10a3c3f29c1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400"
+            src="/"
             alt="About Us"
             className="w-full max-w-xs mx-auto rounded-lg shadow-md"
           />

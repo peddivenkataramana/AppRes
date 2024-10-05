@@ -1,0 +1,11 @@
+.about-us {
+  border: 1px solid #e5e7eb; /* Tailwind gray-300 */
+}
+
+.about-us h2 {
+  color: #374151; /* Tailwind gray-800 */
+}
+
+.about-us p {
+  line-height: 1.6;
+}

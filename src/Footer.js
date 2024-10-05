@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import Logo from "./assessts/Logo-1.png"; // Adjust the path as necessary
+import Logo from "./assessts/Logo1.png"; // Ensure the correct path
 
 const Footer = () => {
   return (
@@ -8,9 +8,10 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4">
         {/* Logo and Name */}
         <div className="flex flex-col items-center mb-4 md:mb-0">
-          <img src={Logo} alt="Curry Express Logo" className="h-16 mb-2" />
-          <h1 className="text-3xl font-bold mb-2">Curry Express</h1>
-
+          <img src={Logo} alt="Curry Express Logo" className="h-16 mb-0" />{" "}
+          {/* Changed mb-2 to mb-0 */}
+          <h1 className="text-3xl font-bold mt-2">Curry Express</h1>{" "}
+          {/* Added mt-2 for spacing */}
           {/* Social Links */}
           <div className="flex space-x-4 mb-4">
             <a
@@ -35,7 +36,6 @@ const Footer = () => {
               <FaTwitter className="text-2xl hover:text-blue-400" />
             </a>
           </div>
-
           {/* Navigation Links */}
           <div className="flex flex-col md:flex-row mb-4">
             <div className="flex space-x-4">

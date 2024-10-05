@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
-import Logo from "./assessts/Logo-1.png"; // Ensure the correct path
+import Logo from "./assessts/Logo1.png"; // Ensure the correct path
 
 const navigation = [
   { name: "Menu", href: "#" },
@@ -11,7 +11,7 @@ const navigation = [
   { name: "Contact Us", href: "#" },
 ];
 
-export default function Header() {
+function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -23,7 +23,6 @@ export default function Header() {
 
       setScrolled(currentScrollY > 50);
       setHeaderVisible(lastScrollY > currentScrollY || currentScrollY < 10);
-
       setLastScrollY(currentScrollY);
     };
 
@@ -45,26 +44,24 @@ export default function Header() {
     >
       <header className="flex items-center justify-between p-4 lg:p-4 lg:pt-4 lg:pb-1">
         <div className="flex items-center">
-          {!mobileMenuOpen && (
-            <a href="#" className="flex items-center">
-              <img
-                alt="Curry Express Logo"
-                src={Logo}
-                className="h-12 w-auto"
-                loading="lazy"
-              />
-              <span className="text-2xl font-bold text-gray-900 ml-2">
-                Curry Xpress
-              </span>
-            </a>
-          )}
+          <a href="#" className="flex items-center">
+            <img
+              alt="Curry Express Logo"
+              src={Logo}
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <span className="text-2xl font-bold text-gray-900 ml-2">
+              Curry Xpress
+            </span>
+          </a>
         </div>
         <nav className="hidden lg:flex lg:gap-x-8 ml-auto">
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className={`text-lg font-semibold text-gray-900 transition duration-200 hover:text-blue-500`}
+              className="text-lg font-semibold text-gray-900 transition duration-200 hover:text-blue-500"
             >
               {item.name}
             </a>
@@ -74,7 +71,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className={`text-gray-900 focus:outline-none`}
+            className="text-gray-900 focus:outline-none"
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -141,3 +138,4 @@ export default function Header() {
     </div>
   );
 }
+export default Header;
