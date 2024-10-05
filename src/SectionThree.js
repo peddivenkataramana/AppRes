@@ -1,21 +1,22 @@
 import React from "react";
+import "./SectionThree.css"; // Ensure this CSS file exists
 
 const SectionThree = () => {
   return (
-    <div className="relative my-10 px-4 py-8">
-      <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-lg p-6">
+    <div className="about-section relative my-10 px-4 py-8">
+      <div className="bg-image p-6 rounded-lg">
+        <div className="mask"></div>{" "}
+        {/* Overlay mask for better text visibility */}
         <h2 className="text-4xl font-bold text-white text-center mb-8">
           About Us
         </h2>
-        <p className="text-lg text-white mb-6">
-          Welcome to Curry Express, where we bring the authentic flavors of
-          India to your table. Our mission is to provide a culinary experience
-          that celebrates the rich heritage of Indian cuisine.
-        </p>
-        <p className="text-lg text-white mb-6">
-          Our chefs are passionate about using traditional recipes and the
-          freshest ingredients, ensuring that every dish is not just a meal but
-          a journey through the vibrant tastes and aromas of India.
+        <p className="text-lg text-white mb-6 ">
+          Welcome to Curry Xpress, where we bring the authentic flavors of India
+          to your table. Our mission is to provide a culinary experience that
+          celebrates the rich heritage of Indian cuisine. Our chefs are
+          passionate about using traditional recipes and the freshest
+          ingredients, ensuring that every dish is not just a meal but a journey
+          through the vibrant tastes and aromas of India.
         </p>
         <p className="text-lg text-white mb-6">
           Whether you're here for a casual meal with friends or a special

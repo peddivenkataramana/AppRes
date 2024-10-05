@@ -1,4 +1,5 @@
 import React from "react";
+import "./SectionFour.css";
 
 const SectionFour = () => {
   const address = "1085 Hickory Point Mall, Forsyth, IL 62535";
@@ -6,8 +7,8 @@ const SectionFour = () => {
     "https://www.google.com/maps/place/Curry+Xpress/@39.9171401,-88.9631137,17z/data=!4m15!1m8!3m7!1s0x8874b3407d49757b:0x66a07404e7dd7452!2sCurry+Xpress!8m2!3d39.9171401!4d-88.9605388!10e1!16s%2Fg%2F11v003gbkn!3m5!1s0x8874b3407d49757b:0x66a07404e7dd7452!8m2!3d39.9171401!4d-88.9605388!16s%2Fg%2F11v003gbkn?entry=ttu&g_ep=EgoyMDI0MDkyNC4wIKXMDSoASAFQAw%3D%3D";
 
   return (
-    <div className="relative my-10 px-4">
-      <div className="max-w-4xl mx-auto bg-gray-100 rounded-lg p-6">
+    <div className="relative my-4 px-4">
+      <div className="max-w-4xl mx-auto bg-gray-200 rounded-lg p-6">
         <h2 className="text-4xl font-bold text-center mb-6">Our Location</h2>
         <div className="flex flex-col md:flex-row md:space-x-6">
           {/* Map Section */}

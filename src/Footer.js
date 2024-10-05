@@ -65,7 +65,7 @@ const Footer = () => {
         </div>
 
         {/* Contact Us */}
-        <div className="text-center">
+        <div className="text-center mb-4 md:mb-0">
           <h2 className="text-lg font-semibold">Contact Us</h2>
           <p>Phone: +1 217-542-5114</p>
           <p>Email: info@curryexpress.com</p>

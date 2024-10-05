@@ -1,0 +1,36 @@
+/* SectionFour.css */
+.relative {
+  position: relative;
+  overflow: hidden; /* Prevent overflow from the container */
+}
+
+.my-4 {
+  margin-top: 1rem; /* Adjust margin for smaller screens */
+  margin-bottom: 1rem;
+}
+
+.max-w-4xl {
+  max-width: 100%; /* Allow the container to take full width */
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc; /* Change background color if needed */
+}
+
+@media (max-width: 768px) {
+  .text-4xl {
+    font-size: 2rem; /* Adjust heading size for mobile */
+  }
+
+  .text-lg {
+    font-size: 0.9rem; /* Adjust paragraph size for mobile */
+  }
+
+  .text-xl {
+    font-size: 1.2rem; /* Adjust larger text for better fit */
+  }
+
+  iframe {
+    height: 200px; /* Reduce iframe height for smaller screens */
+  }
+}
