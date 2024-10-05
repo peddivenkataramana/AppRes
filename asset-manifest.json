@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/AppRes/static/css/main.c884a96f.css",
+    "main.js": "/AppRes/static/js/main.52da74af.js",
+    "static/media/Logo-1.png": "/AppRes/static/media/Logo-1.4f6c5ef30395ff125a95.png",
+    "static/media/naan.png": "/AppRes/static/media/naan.37d032550beecb6cc3ae.png",
+    "static/media/aboutus.jpg": "/AppRes/static/media/aboutus.ca90d3a087ed4f629fb4.jpg",
+    "static/media/butterchicken.jpeg": "/AppRes/static/media/butterchicken.40059771d584ca266079.jpeg",
+    "static/media/dal.jpeg": "/AppRes/static/media/dal.400ef079fec54d373d7b.jpeg",
+    "static/media/lasi.jpeg": "/AppRes/static/media/lasi.ad57b71ec56fec6382e4.jpeg",
+    "static/media/chat.jpeg": "/AppRes/static/media/chat.23f48669476a8ca7647c.jpeg",
+    "static/media/samosa.jpeg": "/AppRes/static/media/samosa.547782d47f8df3c1e571.jpeg",
+    "static/media/tandori.jpeg": "/AppRes/static/media/tandori.7b756f2133ff08eab9a2.jpeg",
+    "static/media/chole.jpeg": "/AppRes/static/media/chole.ace9f2b7fc435581334b.jpeg",
+    "static/media/gulab.jpeg": "/AppRes/static/media/gulab.41ffa695b5a229c3673b.jpeg",
+    "static/media/bgc3.jpeg": "/AppRes/static/media/bgc3.d85e050892180b90c554.jpeg",
+    "static/media/pannerbutter.jpeg": "/AppRes/static/media/pannerbutter.e6af7dd93bdbd9fc0660.jpeg",
+    "static/media/biryani.jpeg": "/AppRes/static/media/biryani.cc1263a8b84d4137f6d3.jpeg",
+    "index.html": "/AppRes/index.html",
+    "main.c884a96f.css.map": "/AppRes/static/css/main.c884a96f.css.map",
+    "main.52da74af.js.map": "/AppRes/static/js/main.52da74af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c884a96f.css",
+    "static/js/main.52da74af.js"
+  ]
+}
