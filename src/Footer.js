@@ -4,72 +4,89 @@ import Logo from "./assessts/Logo1.png"; // Ensure the correct path
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-6">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4">
-        {/* Logo and Name */}
-        <div className="flex flex-col items-center mb-4 md:mb-0">
+    <footer className="bg-gray-800 text-gray-300 py-12">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-8">
+        {/* Left Side: Logo and Name */}
+        <div className="flex flex-col items-center mb-8 md:mb-0 md:w-1/2">
           <img src={Logo} alt="Curry Express Logo" className="h-16 mb-0" />{" "}
-          {/* Changed mb-2 to mb-0 */}
-          <h1 className="text-3xl font-bold mt-2">Curry Express</h1>{" "}
-          {/* Added mt-2 for spacing */}
-          {/* Social Links */}
-          <div className="flex space-x-4 mb-4">
+          {/* No margin below logo */}
+          <h1 className="text-4xl font-bold tracking-tight mt-1">
+            Curry Xpress
+          </h1>{" "}
+          {/* Restaurant Name */}
+          <p className="text-center text-md mt-1">
+            Where Flavor Meets Tradition!
+          </p>{" "}
+          {/* Description */}
+          <div className="flex space-x-4 mt-2">
             <a
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="transition-transform duration-300 transform hover:scale-110 hover:text-blue-500"
             >
-              <FaFacebook className="text-2xl hover:text-blue-500" />
+              <FaFacebook className="text-2xl" />
             </a>
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="transition-transform duration-300 transform hover:scale-110 hover:text-pink-500"
             >
-              <FaInstagram className="text-2xl hover:text-pink-500" />
+              <FaInstagram className="text-2xl" />
             </a>
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="transition-transform duration-300 transform hover:scale-110 hover:text-blue-400"
             >
-              <FaTwitter className="text-2xl hover:text-blue-400" />
+              <FaTwitter className="text-2xl" />
             </a>
           </div>
-          {/* Navigation Links */}
-          <div className="flex flex-col md:flex-row mb-4">
-            <div className="flex space-x-4">
-              <a href="#" className="hover:underline">
-                Home
-              </a>
-              <a href="#" className="hover:underline">
-                Menu
-              </a>
-              <a href="#" className="hover:underline">
-                About Us
-              </a>
-            </div>
-          </div>
         </div>
 
-        {/* Restaurant Hours */}
-        <div className="text-center mb-4 md:mb-0">
-          <h2 className="text-lg font-semibold">Restaurant Hours</h2>
-          <p>Friday: 11 AM–8 PM</p>
-          <p>Saturday: 11 AM–8 PM</p>
-          <p>Sunday: 12–5 PM</p>
-          <p>Monday: 11 AM–8 PM</p>
-          <p>Tuesday: 11 AM–8 PM</p>
-          <p>Wednesday: 11 AM–8 PM</p>
-          <p>Thursday: 11 AM–8 PM</p>
+        {/* Right Side: Restaurant Hours and Contact Us */}
+        <div className="flex flex-col items-center mb-8 md:mb-0 md:w-1/2">
+          <h2 className="text-lg font-semibold text-center">
+            Restaurant Hours
+          </h2>
+          <p className="mt-1 text-center">Mon - Sat: 11 AM – 8 PM</p>
+          <p className="text-center">Sun: 12 PM – 5 PM</p>
+          <h2 className="text-lg font-semibold mt-6 text-center">Contact Us</h2>
+          <p className="mt-1 text-center">Phone: +1 217-542-5114</p>
+          <p className="text-center">
+            Email:{" "}
+            <a
+              href="mailto:info@curryexpress.com"
+              className="hover:underline hover:text-gray-100"
+            >
+              info@curryexpress.com
+            </a>
+          </p>
         </div>
+      </div>
 
-        {/* Contact Us */}
-        <div className="text-center mb-4 md:mb-0">
-          <h2 className="text-lg font-semibold">Contact Us</h2>
-          <p>Phone: +1 217-542-5114</p>
-          <p>Email: info@curryexpress.com</p>
-        </div>
+      {/* Centered Navigation Links Below */}
+      <div className="mt-8 text-center">
+        <nav className="flex justify-center space-x-6">
+          <a href="#" className="hover:underline hover:text-gray-100">
+            Home
+          </a>
+          <a href="#" className="hover:underline hover:text-gray-100">
+            About Us
+          </a>
+          <a href="#" className="hover:underline hover:text-gray-100">
+            Menu
+          </a>
+        </nav>
+      </div>
+
+      {/* Centered Footer Text */}
+      <div className="border-t border-gray-700 mt-4 pt-4 text-center">
+        <p className="text-sm text-gray-400">
+          &copy; {new Date().getFullYear()} Curry Xpress. All rights reserved.
+        </p>
       </div>
     </footer>
   );

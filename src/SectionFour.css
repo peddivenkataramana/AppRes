@@ -1,22 +1,28 @@
-/* SectionFour.css */
 .relative {
   position: relative;
   overflow: hidden; /* Prevent overflow from the container */
-}
-
-.my-4 {
-  margin-top: 1rem; /* Adjust margin for smaller screens */
-  margin-bottom: 1rem;
 }
 
 .max-w-4xl {
   max-width: 100%; /* Allow the container to take full width */
 }
 
+.heading {
+  margin: 40px 0; /* Adjust spacing above and below the heading */
+  font-size: 2rem; /* Adjust size if needed */
+  text-align: center; /* Center the heading */
+}
+
 .bg-gray-100 {
   background-color: #f7fafc; /* Change background color if needed */
 }
 
+/* Remove default margins and paddings */
+p {
+  margin: 0; /* Remove margin from paragraphs */
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
   .text-4xl {
     font-size: 2rem; /* Adjust heading size for mobile */

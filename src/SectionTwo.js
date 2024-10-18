@@ -28,41 +28,43 @@ const photos = [
 
 const SectionTwo = () => {
   return (
-    <div className="relative overflow-hidden my-10 px-4">
-      <div className="background-image"></div> {/* Background Image Layer */}
-      <h2 className="text-3xl font-bold text-center mb-6">
-        {" "}
-        {/* Reduced bottom margin */}
-        Explore Our Culinary Delights
-      </h2>
-      <div className="flex animate-slide min-h-[250px] justify-center py-4">
-        {photos.map((photo) => (
-          <div key={photo.id} className="photo-card mx-4">
-            <img
-              src={photo.src}
-              alt={photo.alt}
-              className="object-cover rounded-lg mb-3"
-            />
-            <div className="p-3">
-              <h3 className="text-lg font-semibold">{photo.alt}</h3>
+    <section className="m-0 p-0 ">
+      <div className="relative overflow-hidden px-4">
+        <div className="background-image"></div>
+        <h2 className="text-3xl font-bold text-center mb-6 mt-4">
+          {" "}
+          {/* Added mt-4 for margin above */}
+          Explore Our Culinary Delights
+        </h2>
+        <div className="flex animate-slide justify-center items-center py-4 space-x-4">
+          {photos.map((photo) => (
+            <div key={photo.id} className="photo-card">
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                className="object-cover rounded-lg w-full h-[150px]" // Set height and width here
+              />
+              <div className="p-3">
+                <h3 className="text-lg font-semibold">{photo.alt}</h3>
+              </div>
             </div>
-          </div>
-        ))}
-        {/* Duplicate for infinite scroll effect */}
-        {photos.map((photo) => (
-          <div key={photo.id + 100} className="photo-card mx-4">
-            <img
-              src={photo.src}
-              alt={photo.alt}
-              className="object-cover rounded-lg mb-3"
-            />
-            <div className="p-3">
-              <h3 className="text-lg font-semibold">{photo.alt}</h3>
+          ))}
+          {/* Duplicate for infinite scroll effect */}
+          {photos.map((photo) => (
+            <div key={photo.id + 100} className="photo-card">
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                className="object-cover rounded-lg w-full h-[150px]" // Same here
+              />
+              <div className="p-3">
+                <h3 className="text-lg font-semibold">{photo.alt}</h3>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

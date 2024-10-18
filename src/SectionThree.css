@@ -1,26 +1,53 @@
-/* SectionThree.css */
-
 .about-section {
   position: relative;
   max-width: 1200px; /* Limit the maximum width for larger screens */
   margin: 0 auto; /* Center align */
   padding: 0; /* Remove extra padding to fill edge to edge */
+  overflow: hidden; /* Prevent content overflow */
 }
 
 .bg-image {
-  background-image: url("./assessts/aboutus.jpg"); /* Add your background image URL */
+  background-image: url("./assessts/aboutus1.jpeg"); /* Ensure correct image path */
   background-size: cover; /* Cover the entire area */
   background-position: center; /* Center the image */
-  border-radius: 0.5rem; /* Match the rounded corners */
   min-height: 300px; /* Ensure minimum height for visibility */
-  padding: 1rem; /* Adjust padding for consistency */
   margin: 0 -1rem; /* Negative margin to pull content edge to edge */
+  position: relative; /* Set position for mask */
+  display: flex; /* Use flexbox for content alignment */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
 }
 
 /* Mask for overlay */
 .mask {
   background-color: rgba(0, 0, 0, 0.5); /* Overlay color for the mask */
+  position: absolute; /* Ensure the mask covers the entire section */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   border-radius: 0.5rem; /* Ensure the mask has rounded corners */
+}
+
+/* Content styling */
+.content {
+  position: relative; /* Ensure content is above the mask */
+  z-index: 1; /* Bring content above the mask */
+  text-align: center; /* Center align text */
+  padding: 2rem; /* Add padding for content */
+  color: white; /* Set text color */
+}
+
+h2 {
+  font-size: 2.5rem; /* Responsive font size */
+  font-weight: bold; /* Emphasize the title */
+  margin-bottom: 1rem; /* Space below title */
+}
+
+p {
+  font-size: 1rem; /* Standard paragraph size */
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 1rem; /* Space below paragraphs */
 }
 
 /* Responsive adjustments */
@@ -41,13 +68,8 @@
 
 @media (max-width: 768px) {
   /* Mobile view */
-  .about-section {
-    padding: 0; /* Ensure no padding in about-section */
-  }
-
   .bg-image {
     min-height: 220px; /* Set minimum height for mobile */
-    padding: 1rem; /* Adjust padding */
     margin: 0; /* Remove margin to fill edge to edge */
   }
 
@@ -59,10 +81,10 @@
     font-size: 0.8rem; /* Further reduce paragraph font size */
     line-height: 1.4; /* Adjust line height for better readability */
   }
+}
 
-  /* Adjust image responsiveness */
-  img {
-    max-width: 100%; /* Ensure the image scales down */
-    height: auto; /* Maintain aspect ratio */
-  }
+/* Adjust image responsiveness */
+img {
+  max-width: 100%; /* Ensure the image scales down */
+  height: auto; /* Maintain aspect ratio */
 }
