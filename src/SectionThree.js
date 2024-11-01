@@ -1,6 +1,5 @@
 import React from "react";
 import "./SectionThree.css"; // Ensure this CSS file exists
-import aboutImage from "./assessts/aboutus.jpg"; // Replace with your actual image path
 
 const SectionThree = () => {
   return (

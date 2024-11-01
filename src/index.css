@@ -14,3 +14,16 @@ body {
   margin: 0; /* No margin on body */
   padding: 0; /* No padding on body */
 }
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* To ensure buttons don't wrap on smaller screens */
+.flex-nowrap {
+  flex-wrap: nowrap;
+}

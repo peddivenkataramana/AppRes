@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
+import { Link, useLocation } from "react-router-dom"; // Import Link and useLocation
 import Logo from "./assessts/Logo1.png"; // Ensure the correct path
 
 const navigation = [
@@ -12,6 +13,7 @@ const navigation = [
 ];
 
 function Header() {
+  const location = useLocation(); // Get current location
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -44,7 +46,7 @@ function Header() {
     >
       <header className="flex items-center justify-between p-4 lg:p-4 lg:pt-4 lg:pb-1">
         <div className="flex items-center">
-          <a href="#" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img
               alt="Curry Express Logo"
               src={Logo}
@@ -54,17 +56,26 @@ function Header() {
             <span className="text-2xl font-bold text-gray-900 ml-2">
               Curry Xpress
             </span>
-          </a>
+          </Link>
         </div>
         <nav className="hidden lg:flex lg:gap-x-8 ml-auto">
+          {/* Conditional Rendering for Home/Orders */}
+          {location.pathname === "/order" ? (
+            <Link
+              to="/AppRes"
+              className="text-lg font-semibold text-gray-900 transition duration-200 hover:text-blue-500"
+            >
+              Home
+            </Link>
+          ) : null}
           {navigation.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
+              to={item.href}
               className="text-lg font-semibold text-gray-900 transition duration-200 hover:text-blue-500"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </nav>
         <div className="flex lg:hidden">
@@ -123,14 +134,23 @@ function Header() {
             </button>
           </div>
           <div className="flex flex-col items-center space-y-4">
+            {/* Mobile Conditional Home Link */}
+            {location.pathname === "/order" ? (
+              <Link
+                to="/AppRes"
+                className="text-lg font-medium text-gray-900 hover:bg-gray-200 rounded-full px-4 py-2 transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Home
+              </Link>
+            ) : null}
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-lg font-medium text-gray-900 hover:bg-gray-200 rounded-full px-4 py-2 transition duration-300 ease-in-out transform hover:scale-105"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         </DialogPanel>
@@ -138,4 +158,5 @@ function Header() {
     </div>
   );
 }
+
 export default Header;

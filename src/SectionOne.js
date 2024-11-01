@@ -1,7 +1,8 @@
 import React from "react";
-import Back from "./assessts/bgc3.jpeg"; // Corrected the assets folder name
+import Back from "./assessts/bgc3.jpeg"; // Make sure the path is correct
+import { Link } from "react-router-dom";
 
-export default function SectionOne() {
+const SectionOne = () => {
   return (
     <section className="m-0 p-0">
       <div
@@ -20,20 +21,22 @@ export default function SectionOne() {
           Delightful curries and dishes crafted with passion and tradition.
         </h2>
         <div className="mt-8 flex justify-center gap-x-4">
-          <a
-            href="#"
+          <Link
+            to="/order" // This links to the Order page
             className="rounded-md bg-orange-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 transition duration-200"
           >
             Order
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="#"
             className="rounded-md border border-gray-300 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-100 transition duration-200"
           >
             Menu
-          </a>
+          </Link>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default SectionOne;
