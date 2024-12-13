@@ -2,18 +2,17 @@
 
 import { useState, useEffect } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { Link, useLocation } from "react-router-dom"; // Import Link and useLocation
+import { Link, useLocation, useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import Logo from "./assessts/Logo1.png"; // Ensure the correct path
 
 const navigation = [
-  { name: "Menu", href: "#" },
-  { name: "About Us", href: "#" },
-  { name: "Location", href: "#" },
-  { name: "Contact Us", href: "#" },
+  { name: "About Us", href: "#aboutus", scrollToCenter: true },
+  { name: "Location", href: "#location", scrollToCenter: true },
 ];
 
 function Header() {
   const location = useLocation(); // Get current location
+  const navigate = useNavigate(); // Used for programmatic navigation
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -22,7 +21,6 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
       setScrolled(currentScrollY > 50);
       setHeaderVisible(lastScrollY > currentScrollY || currentScrollY < 10);
       setLastScrollY(currentScrollY);
@@ -33,6 +31,117 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
+
+  const handleLinkClick = (e, href) => {
+    e.preventDefault();
+
+    if (href.startsWith("/")) {
+      // Route-based navigation
+      navigate(href);
+    } else if (href.startsWith("#")) {
+      // Scroll to section on the same page
+      const targetId = href.substring(1); // Remove '#' symbol
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
+    }
+
+    setMobileMenuOpen(false); // Close the mobile menu after click
+  };
+
+  const renderNavigation = () => {
+    if (location.pathname === "/order") {
+      // For Order Page, show "Hi, for further assistance" and the phone number
+      return (
+        <>
+          <a
+            href="/AppRes"
+            onClick={(e) => handleLinkClick(e, "/AppRes")}
+            className="text-lg font-semibold text-gray-900 transition duration-200 hover:text-blue-500"
+          >
+            Home
+          </a>
+          <div className="text-lg font-semibold text-gray-900">
+            <p>For further assistance:</p>
+            <a
+              href="tel:+1234567890" // Add your actual phone number
+              className="text-blue-500 transition duration-200 hover:text-blue-700"
+            >
+              Phone No: +1 234 567 890
+            </a>
+          </div>
+        </>
+      );
+    } else if (location.pathname === "/menu") {
+      // For Menu Page, show only "Order Now", "Home", and phone number
+      return (
+        <>
+          <a
+            href="/order"
+            onClick={(e) => handleLinkClick(e, "/order")}
+            className="text-lg font-semibold text-gray-900 transition duration-200 hover:text-blue-500"
+          >
+            Order Now
+          </a>
+          <a
+            href="/AppRes"
+            onClick={(e) => handleLinkClick(e, "/AppRes")}
+            className="text-lg font-semibold text-gray-900 transition duration-200 hover:text-blue-500"
+          >
+            Home
+          </a>
+          <div className="text-lg font-semibold text-gray-900">
+            <p>For further assistance:</p>
+            <a
+              href="tel:+1234567890" // Add your actual phone number
+              className="text-blue-500 transition duration-200 hover:text-blue-700"
+            >
+              Phone No: +1 234 567 890
+            </a>
+          </div>
+        </>
+      );
+    } else if (location.pathname === "/AppRes") {
+      // For Home Page
+      return (
+        <>
+          <a
+            href="/order"
+            onClick={(e) => handleLinkClick(e, "/order")}
+            className="text-lg font-semibold text-gray-900 transition duration-200 hover:text-blue-500"
+          >
+            Order Now
+          </a>
+          {navigation.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              onClick={(e) => handleLinkClick(e, item.href)}
+              className="text-lg font-semibold text-gray-900 transition duration-200 hover:text-blue-500"
+            >
+              {item.name}
+            </a>
+          ))}
+        </>
+      );
+    } else {
+      // For Other Pages
+      return navigation.map((item) => (
+        <a
+          key={item.name}
+          href={item.href}
+          onClick={(e) => handleLinkClick(e, item.href)}
+          className="text-lg font-semibold text-gray-900 transition duration-200 hover:text-blue-500"
+        >
+          {item.name}
+        </a>
+      ));
+    }
+  };
 
   return (
     <div
@@ -46,7 +155,7 @@ function Header() {
     >
       <header className="flex items-center justify-between p-4 lg:p-4 lg:pt-4 lg:pb-1">
         <div className="flex items-center">
-          <Link to="/" className="flex items-center">
+          <Link to="/AppRes" className="flex items-center">
             <img
               alt="Curry Express Logo"
               src={Logo}
@@ -58,26 +167,11 @@ function Header() {
             </span>
           </Link>
         </div>
+
         <nav className="hidden lg:flex lg:gap-x-8 ml-auto">
-          {/* Conditional Rendering for Home/Orders */}
-          {location.pathname === "/order" ? (
-            <Link
-              to="/AppRes"
-              className="text-lg font-semibold text-gray-900 transition duration-200 hover:text-blue-500"
-            >
-              Home
-            </Link>
-          ) : null}
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              to={item.href}
-              className="text-lg font-semibold text-gray-900 transition duration-200 hover:text-blue-500"
-            >
-              {item.name}
-            </Link>
-          ))}
+          {renderNavigation()}
         </nav>
+
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -103,6 +197,7 @@ function Header() {
         </div>
       </header>
 
+      {/* Full-Screen Mobile Menu */}
       <Dialog
         open={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}
@@ -110,7 +205,7 @@ function Header() {
       >
         <div className="fixed inset-0 z-50 bg-black opacity-75" />
         <DialogPanel className="fixed inset-0 z-50 bg-white p-6 flex flex-col transition-transform transform-gpu">
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex justify-end mb-4 ">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -133,25 +228,8 @@ function Header() {
               </svg>
             </button>
           </div>
-          <div className="flex flex-col items-center space-y-4">
-            {/* Mobile Conditional Home Link */}
-            {location.pathname === "/order" ? (
-              <Link
-                to="/AppRes"
-                className="text-lg font-medium text-gray-900 hover:bg-gray-200 rounded-full px-4 py-2 transition duration-300 ease-in-out transform hover:scale-105"
-              >
-                Home
-              </Link>
-            ) : null}
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="text-lg font-medium text-gray-900 hover:bg-gray-200 rounded-full px-4 py-2 transition duration-300 ease-in-out transform hover:scale-105"
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="flex flex-col items-center space-y-6">
+            {renderNavigation()}
           </div>
         </DialogPanel>
       </Dialog>

@@ -1,10 +1,19 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import Logo from "./assessts/Logo1.png"; // Ensure the correct path
+import { Link } from "react-router-dom"; // Import Link for routing
 
 const Footer = () => {
+  const scrollToTop = (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scroll to top
+    });
+  };
+
   return (
-    <footer className="bg-gray-800 text-gray-300 py-12">
+    <footer id="footer" className="bg-gray-800 text-gray-300 py-12">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-8">
         {/* Left Side: Logo and Name */}
         <div className="flex flex-col items-center mb-8 md:mb-0 md:w-1/2">
@@ -20,7 +29,7 @@ const Footer = () => {
           {/* Description */}
           <div className="flex space-x-4 mt-2">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/people/Curry-Xpress/100092756291418/?mibextid=eQY6cl"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-transform duration-300 transform hover:scale-110 hover:text-blue-500"
@@ -28,7 +37,7 @@ const Footer = () => {
               <FaFacebook className="text-2xl" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/curry__xpress/"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-transform duration-300 transform hover:scale-110 hover:text-pink-500"
@@ -70,15 +79,25 @@ const Footer = () => {
       {/* Centered Navigation Links Below */}
       <div className="mt-8 text-center">
         <nav className="flex justify-center space-x-6">
-          <a href="#" className="hover:underline hover:text-gray-100">
+          <a
+            href="#home" // This will scroll to the top of the page (Home)
+            onClick={scrollToTop} // Use the custom function to scroll
+            className="hover:underline hover:text-gray-100"
+          >
             Home
           </a>
-          <a href="#" className="hover:underline hover:text-gray-100">
+          <a
+            href="#aboutus" // This will scroll to the About Us section on the same page
+            className="hover:underline hover:text-gray-100"
+          >
             About Us
           </a>
-          <a href="#" className="hover:underline hover:text-gray-100">
+          <Link
+            to="/menu" // This links to the menu page directly
+            className="hover:underline hover:text-gray-100"
+          >
             Menu
-          </a>
+          </Link>
         </nav>
       </div>
 

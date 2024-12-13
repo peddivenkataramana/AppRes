@@ -8,8 +8,9 @@ import SectionTwo from "./SectionTwo";
 import SectionThree from "./SectionThree";
 import SectionFour from "./SectionFour";
 import Footer from "./Footer";
-import Orderpage from "./Orderpage"; // Make sure the case matches the filename
-
+import Orderpage from "./Orderpage"; // Ensure the case matches the filename
+import Menu from "./Menu"; // Import the Menu page
+import Admin from "./Adminpage";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -30,6 +31,7 @@ root.render(
             }
           />
           <Route path="/order" element={<Orderpage />} />
+          <Route path="/menu" element={<Menu />} /> {/* Add Menu Route */}
         </Routes>
       </div>
     </Router>

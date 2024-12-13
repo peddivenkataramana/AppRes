@@ -3,7 +3,7 @@ import "./SectionThree.css"; // Ensure this CSS file exists
 
 const SectionThree = () => {
   return (
-    <div className="about-section relative my-10 px-4">
+    <div id="aboutus" className="about-section relative my-10 px-4">
       <div className="bg-image rounded-lg">
         <div className="mask"></div>
         <div className="content p-8">

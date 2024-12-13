@@ -7,7 +7,7 @@ const SectionFour = () => {
     "https://www.google.com/maps/place/Curry+Xpress/@39.9171401,-88.9631137,17z";
 
   return (
-    <div className="relative">
+    <div id="location" className="relative py-5">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold text-center">Our Location</h2>
         <div className="flex flex-col md:flex-row">

@@ -28,7 +28,7 @@ const SectionOne = () => {
             Order
           </Link>
           <Link
-            to="#"
+            to="/menu" // This links to the Menu page
             className="rounded-md border border-gray-300 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-100 transition duration-200"
           >
             Menu
