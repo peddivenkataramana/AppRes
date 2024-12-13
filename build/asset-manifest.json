@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/AppRes/static/css/main.de404b38.css",
-    "main.js": "/AppRes/static/js/main.6fda0e8c.js",
+    "main.css": "/AppRes/static/css/main.f7b094be.css",
+    "main.js": "/AppRes/static/js/main.b76c518f.js",
     "static/media/naan.png": "/AppRes/static/media/naan.37d032550beecb6cc3ae.png",
     "static/media/Logo1.png": "/AppRes/static/media/Logo1.6a3d8447da0e5a4650cd.png",
     "static/media/butterchicken.jpeg": "/AppRes/static/media/butterchicken.40059771d584ca266079.jpeg",
@@ -17,11 +17,11 @@
     "static/media/pannerbutter.jpeg": "/AppRes/static/media/pannerbutter.e6af7dd93bdbd9fc0660.jpeg",
     "static/media/biryani.jpeg": "/AppRes/static/media/biryani.cc1263a8b84d4137f6d3.jpeg",
     "index.html": "/AppRes/index.html",
-    "main.de404b38.css.map": "/AppRes/static/css/main.de404b38.css.map",
-    "main.6fda0e8c.js.map": "/AppRes/static/js/main.6fda0e8c.js.map"
+    "main.f7b094be.css.map": "/AppRes/static/css/main.f7b094be.css.map",
+    "main.b76c518f.js.map": "/AppRes/static/js/main.b76c518f.js.map"
   },
   "entrypoints": [
-    "static/css/main.de404b38.css",
-    "static/js/main.6fda0e8c.js"
+    "static/css/main.f7b094be.css",
+    "static/js/main.b76c518f.js"
   ]
 }
