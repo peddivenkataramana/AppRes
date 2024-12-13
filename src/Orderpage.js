@@ -179,13 +179,16 @@ const OrderPage = () => {
     };
 
     try {
-      const response = await fetch("https://appresbackend.onrender.com/add", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(orderData),
-      });
+      const response = await fetch(
+        "https://appresbackend.onrender.com/AppRes/add",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(orderData),
+        }
+      );
 
       const responseData = await response.json();
 
