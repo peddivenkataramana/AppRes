@@ -179,7 +179,7 @@ const OrderPage = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:10000/AppRes/add", {
+      const response = await fetch("https://appresbackend.onrender.com/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
