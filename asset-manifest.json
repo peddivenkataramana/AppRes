@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/AppRes/static/css/main.42249e9b.css",
-    "main.js": "/AppRes/static/js/main.d6613381.js",
+    "main.css": "/AppRes/static/css/main.6971566c.css",
+    "main.js": "/AppRes/static/js/main.81108e32.js",
     "static/media/naan.png": "/AppRes/static/media/naan.37d032550beecb6cc3ae.png",
     "static/media/Logo1.png": "/AppRes/static/media/Logo1.6a3d8447da0e5a4650cd.png",
     "static/media/butterchicken.jpeg": "/AppRes/static/media/butterchicken.40059771d584ca266079.jpeg",
@@ -17,11 +17,11 @@
     "static/media/pannerbutter.jpeg": "/AppRes/static/media/pannerbutter.e6af7dd93bdbd9fc0660.jpeg",
     "static/media/biryani.jpeg": "/AppRes/static/media/biryani.cc1263a8b84d4137f6d3.jpeg",
     "index.html": "/AppRes/index.html",
-    "main.42249e9b.css.map": "/AppRes/static/css/main.42249e9b.css.map",
-    "main.d6613381.js.map": "/AppRes/static/js/main.d6613381.js.map"
+    "main.6971566c.css.map": "/AppRes/static/css/main.6971566c.css.map",
+    "main.81108e32.js.map": "/AppRes/static/js/main.81108e32.js.map"
   },
   "entrypoints": [
-    "static/css/main.42249e9b.css",
-    "static/js/main.d6613381.js"
+    "static/css/main.6971566c.css",
+    "static/js/main.81108e32.js"
   ]
 }
