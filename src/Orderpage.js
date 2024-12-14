@@ -4,58 +4,572 @@ import { FaShoppingCart } from "react-icons/fa"; // Ensure you have react-icons 
 const categories = [
   "All",
   "Appetizers",
-  "Main Course",
-  "Desserts",
-  "Beverages",
+  "Platter",
+  "Veg Spl",
+  "Goat Spl",
+  "Lamb Spl",
+  "Chicken Spl",
+  "Shrimp Spl",
+  "Biryani Spl",
+  "Curry Xpress Spl",
+  "Kids Spl",
+  "Breads",
+  "Chutney (Indian Sauce)",
+  "Dessert",
+  "Drinks",
 ];
 
-// Sample menu items
 const menuItems = [
   {
     id: 1,
-    name: "Chicken Tikka Masala",
-    description: "Tender chicken in a creamy tomato sauce.",
-    price: 12.99,
-    category: "Main Course",
+    name: "Samosa",
+    description: "Crispy pastry pockets filled with spiced potatoes and peas.",
+    price: 2.49,
+    category: "Appetizers",
   },
   {
     id: 2,
-    name: "Paneer Butter Masala",
-    description: "Paneer cooked in a rich, buttery gravy.",
-    price: 11.99,
-    category: "Main Course",
+    name: "Samosa Chaat",
+    description:
+      "Crispy samosas topped with tangy yogurt, chutneys, and chickpeas.",
+    price: 8.99,
+    category: "Appetizers",
   },
   {
     id: 3,
-    name: "Vegetable Biryani",
+    name: "Mix Vegetable Pakora",
     description:
-      "Aromatic basmati rice cooked with mixed vegetables and spices.",
-    price: 10.99,
-    category: "Main Course",
+      "Crispy fried fritters made with a blend of mixed vegetables and spices.",
+    price: 8.99,
+    category: "Appetizers",
   },
   {
     id: 4,
-    name: "Samosas",
-    description: "Crispy pastries filled with spiced potatoes.",
-    price: 5.99,
+    name: "Paneer Pakora",
+    description:
+      "Fried chunks of paneer (Indian cheese) dipped in a spiced chickpea batter.",
+    price: 10.99,
     category: "Appetizers",
   },
   {
     id: 5,
-    name: "Gulab Jamun",
-    description: "Sweet fried dough balls soaked in syrup.",
-    price: 4.99,
-    category: "Desserts",
+    name: "Aloo Tikki Chaat",
+    description:
+      "Spicy potato patties topped with yogurt, tamarind chutney, and sev.",
+    price: 8.99,
+    category: "Appetizers",
   },
   {
     id: 6,
-    name: "Mango Lassi",
-    description: "Creamy yogurt drink with mango.",
+    name: "Pani Puri",
+    description:
+      "Crispy puris filled with tangy tamarind water, chickpeas, and potatoes.",
+    price: 8.99,
+    category: "Appetizers",
+  },
+  {
+    id: 7,
+    name: "Chicken Wings",
+    description:
+      "Crispy fried chicken wings seasoned with spices and served with a tangy sauce.",
+    price: 8.99,
+    category: "Appetizers",
+  },
+  {
+    id: 8,
+    name: "Chicken Pakora",
+    description:
+      "Tender chicken pieces coated in a spiced chickpea batter and deep-fried.",
+    price: 11.99,
+    category: "Appetizers",
+  },
+  {
+    id: 9,
+    name: "Chicken 65",
+    description:
+      "Spicy, deep-fried chicken pieces served with curry leaves and chilies.",
+    price: 15.99,
+    category: "Appetizers",
+  },
+  {
+    id: 10,
+    name: "Fish Pakora",
+    description: "Crispy fried fish fillets coated in a spiced batter.",
+    price: 15.99,
+    category: "Appetizers",
+  },
+  {
+    id: 11,
+    name: "Vegetable Korma",
+    description:
+      "Mixed vegetables cooked in a rich, creamy gravy with aromatic spices.",
+    price: 15.99,
+    category: "Platter",
+  },
+  {
+    id: 12,
+    name: "Butter Chicken",
+    description: "Tender chicken cooked in a rich, creamy tomato sauce.",
+    price: 15.99,
+    category: "Platter",
+  },
+  {
+    id: 13,
+    name: "Paneer Makhani",
+    description:
+      "Indian cottage cheese cubes in a creamy, spiced tomato-based sauce.",
+    price: 15.99,
+    category: "Platter",
+  },
+  {
+    id: 14,
+    name: "Chicken Korma",
+    description:
+      "Boneless chicken in a rich and creamy yogurt-based curry with cashews.",
+    price: 15.99,
+    category: "Platter",
+  },
+  {
+    id: 15,
+    name: "Chana Masala",
+    description:
+      "Chickpeas cooked in a flavorful and aromatic tomato-based sauce.",
+    price: 14.99,
+    category: "Platter",
+  },
+  {
+    id: 16,
+    name: "Chicken Curry",
+    description: "Tender chicken pieces cooked in a spiced curry sauce.",
+    price: 15.99,
+    category: "Platter",
+  },
+  {
+    id: 17,
+    name: "Dal Tadka",
+    description:
+      "Yellow lentils cooked with tempering of garlic, cumin, and mustard seeds.",
+    price: 14.99,
+    category: "Platter",
+  },
+  {
+    id: 18,
+    name: "Aloo Mutter",
+    description:
+      "Potatoes and peas cooked in a mildly spiced, tomato-based gravy.",
+    price: 14.99,
+    category: "Veg Spl",
+  },
+  {
+    id: 19,
+    name: "Paneer Makhani",
+    description:
+      "Paneer (Indian cheese) cooked in a rich, buttery tomato sauce.",
+    price: 15.99,
+    category: "Veg Spl",
+  },
+  {
+    id: 20,
+    name: "Kadhai Paneer",
+    description:
+      "Cottage cheese cooked in a spicy and tangy stir-fry with bell peppers and tomatoes.",
+    price: 15.99,
+    category: "Veg Spl",
+  },
+  {
+    id: 21,
+    name: "Palak Paneer",
+    description: "Paneer cubes cooked in a spiced spinach gravy.",
+    price: 15.99,
+    category: "Veg Spl",
+  },
+  {
+    id: 22,
+    name: "Mutter Paneer",
+    description:
+      "Paneer and peas cooked in a mildly spiced tomato-based curry.",
+    price: 14.99,
+    category: "Veg Spl",
+  },
+  {
+    id: 23,
+    name: "Chilli Paneer",
+    description:
+      "Crispy paneer cubes stir-fried with bell peppers, onions, and a spicy sauce.",
+    price: 15.99,
+    category: "Veg Spl",
+  },
+  {
+    id: 24,
+    name: "Paneer Tikka Masala",
+    description:
+      "Grilled paneer in a creamy and spiced tomato-based curry sauce.",
+    price: 15.99,
+    category: "Veg Spl",
+  },
+  {
+    id: 25,
+    name: "Vegetable Korma",
+    description: "Mixed vegetables cooked in a creamy, mildly spiced sauce.",
+    price: 15.99,
+    category: "Veg Spl",
+  },
+  {
+    id: 26,
+    name: "Mix Vegetable",
+    description:
+      "A variety of seasonal vegetables cooked in a spiced tomato-based gravy.",
+    price: 14.99,
+    category: "Veg Spl",
+  },
+  {
+    id: 27,
+    name: "Malai Kofta",
+    description:
+      "Soft, creamy dumplings made from mashed vegetables in a rich gravy.",
+    price: 14.99,
+    category: "Veg Spl",
+  },
+  {
+    id: 28,
+    name: "Kadhi Pakoda",
+    description: "Gram flour dumplings in a tangy yogurt-based curry.",
+    price: 13.99,
+    category: "Veg Spl",
+  },
+  {
+    id: 29,
+    name: "Chana Masala",
+    description: "Spicy chickpeas cooked in a tangy tomato-based curry.",
+    price: 14.99,
+    category: "Veg Spl",
+  },
+  {
+    id: 30,
+    name: "Puri Chole",
+    description: "Deep-fried puris served with spicy chickpea curry.",
+    price: 12.99,
+    category: "Veg Spl",
+  },
+  {
+    id: 31,
+    name: "Goat Curry",
+    description: "Tender goat meat cooked in a rich, spiced curry sauce.",
+    price: 18.99,
+    category: "Goat Spl",
+  },
+  {
+    id: 32,
+    name: "Goat Vindaloo",
+    description:
+      "Spicy and tangy goat meat curry made with vinegar and chili paste.",
+    price: 18.99,
+    category: "Goat Spl",
+  },
+  {
+    id: 33,
+    name: "Goat Rogan Josh",
+    description: "Slow-cooked goat in a fragrant, spiced curry with yogurt.",
+    price: 18.99,
+    category: "Goat Spl",
+  },
+  {
+    id: 34,
+    name: "Kadai Goat",
+    description:
+      "Goat meat cooked in a spicy, tangy curry with peppers and onions.",
+    price: 18.99,
+    category: "Goat Spl",
+  },
+  {
+    id: 35,
+    name: "Bhuna Goat",
+    description: "Goat meat cooked in a rich, deeply spiced dry curry.",
+    price: 18.99,
+    category: "Goat Spl",
+  },
+  {
+    id: 36,
+    name: "Lamb Curry",
+    description: "Tender lamb pieces cooked in a flavorful curry sauce.",
+    price: 18.99,
+    category: "Lamb Spl",
+  },
+  {
+    id: 37,
+    name: "Lamb Vindaloo",
+    description:
+      "Lamb cooked in a spicy, tangy curry with vinegar and chili paste.",
+    price: 18.99,
+    category: "Lamb Spl",
+  },
+  {
+    id: 38,
+    name: "Lamb Rogan Josh",
+    description: "Lamb slow-cooked in a rich, aromatic curry with yogurt.",
+    price: 18.99,
+    category: "Lamb Spl",
+  },
+  {
+    id: 39,
+    name: "Lamb Saag",
+    description: "Lamb cooked with spinach and spices in a flavorful curry.",
+    price: 18.99,
+    category: "Lamb Spl",
+  },
+  {
+    id: 40,
+    name: "Butter Chicken",
+    description:
+      "Tender chicken cooked in a creamy, mildly spiced tomato sauce.",
+    price: 15.99,
+    category: "Biryani Spl",
+  },
+  {
+    id: 41,
+    name: "Chicken Tikka Masala",
+    description:
+      "Grilled chicken pieces in a rich, creamy, spiced tomato gravy.",
+    price: 15.99,
+    category: "Biryani Spl",
+  },
+  {
+    id: 42,
+    name: "Chicken Curry",
+    description:
+      "Spicy chicken curry cooked with a variety of spices and herbs.",
+    price: 15.99,
+    category: "Biryani Spl",
+  },
+  {
+    id: 43,
+    name: "Chicken Vindaloo",
+    description: "Spicy chicken curry with a tangy vinegar base.",
+    price: 15.99,
+    category: "Chicken Spl",
+  },
+  {
+    id: 44,
+    name: "Chicken Rogan Josh",
+    description: "Chicken cooked in a rich, aromatic curry sauce with yogurt.",
+    price: 15.99,
+    category: "Chicken Spl",
+  },
+  {
+    id: 45,
+    name: "Chicken Korma",
+    description: "Chicken cooked in a creamy, cashew-based gravy.",
+    price: 15.99,
+    category: "Chicken Spl",
+  },
+  {
+    id: 46,
+    name: "Kadai Chicken",
+    description:
+      "Chicken cooked in a spicy and tangy curry with peppers and onions.",
+    price: 15.99,
+    category: "Chicken Spl",
+  },
+  {
+    id: 47,
+    name: "Saag Chicken",
+    description: "Chicken cooked in a flavorful spinach and spice sauce.",
+    price: 15.99,
+    category: "Chicken Spl",
+  },
+  {
+    id: 48,
+    name: "Chilli Chicken",
+    description: "Crispy chicken tossed with bell peppers and spicy sauce.",
+    price: 15.99,
+    category: "Chicken Spl",
+  },
+  {
+    id: 49,
+    name: "Tandoori Chicken",
+    description:
+      "Marinated chicken cooked in a tandoor, served with aromatic spices.",
+    price: 15.99,
+    category: "Chicken Spl",
+  },
+  {
+    id: 50,
+    name: "Shrimp Curry",
+    description: "Shrimp cooked in a rich, flavorful curry sauce.",
+    price: 18.99,
+    category: "Shrimp Spl",
+  },
+  {
+    id: 51,
+    name: "Shrimp Tikka Masala",
+    description: "Shrimp cooked in a creamy, spiced tomato gravy.",
+    price: 18.99,
+    category: "Shrimp Spl",
+  },
+  {
+    id: 52,
+    name: "Shrimp Chilly",
+    description:
+      "Spicy, crispy shrimp stir-fried with bell peppers and chilies.",
+    price: 18.99,
+    category: "Shrimp Spl",
+  },
+  {
+    id: 53,
+    name: "Vegetable Biryani",
+    description: "Aromatic basmati rice cooked with vegetables and spices.",
+    price: 14.99,
+    category: "Biryani Spl",
+  },
+  {
+    id: 54,
+    name: "Chicken Biryani",
+    description:
+      "Fragrant basmati rice cooked with marinated chicken and spices.",
+    price: 15.99,
+    category: "Biryani Spl",
+  },
+  {
+    id: 55,
+    name: "Goat Biryani",
+    description: "Spiced basmati rice cooked with tender goat meat.",
+    price: 18.99,
+    category: "Biryani Spl",
+  },
+  {
+    id: 56,
+    name: "Lamb Biryani",
+    description: "Aromatic rice cooked with succulent lamb pieces and spices.",
+    price: 18.99,
+    category: "Biryani Spl",
+  },
+  {
+    id: 57,
+    name: "Shrimp Biryani",
+    description: "Fragrant rice cooked with shrimp and a blend of spices.",
+    price: 18.99,
+    category: "Biryani Spl",
+  },
+  {
+    id: 58,
+    name: "Chicken Over Rice",
+    description: "Grilled chicken served over rice with a side of curry sauce.",
+    price: 14.99,
+    category: "Curry Xpress Spl",
+  },
+  {
+    id: 59,
+    name: "Rice And 1 Entree & Drink",
+    description: "Rice served with a choice of entree and a drink.",
+    price: 14.99,
+    category: "Kids Spl",
+  },
+  {
+    id: 60,
+    name: "Plain Naan",
+    description: "Soft, fluffy flatbread baked in a tandoor.",
+    price: 2.99,
+    category: "Breads",
+  },
+  {
+    id: 61,
+    name: "Garlic Naan",
+    description: "Soft flatbread topped with fragrant garlic and herbs.",
+    price: 3.49,
+    category: "Breads",
+  },
+  {
+    id: 62,
+    name: "Tawa Roti",
+    description: "Thin, crisp flatbread cooked on a tawa (griddle).",
+    price: 2.99,
+    category: "Breads",
+  },
+  {
+    id: 63,
+    name: "Plain Prantha",
+    description: "Soft flatbread cooked on a tawa.",
     price: 3.99,
-    category: "Beverages",
+    category: "Breads",
+  },
+  {
+    id: 64,
+    name: "Aloo Prantha",
+    description: "Flatbread stuffed with spiced mashed potatoes.",
+    price: 4.99,
+    category: "Breads",
+  },
+  {
+    id: 65,
+    name: "Paneer Prantha",
+    description: "Flatbread stuffed with spiced paneer (Indian cheese).",
+    price: 5.99,
+    category: "Breads",
+  },
+  {
+    id: 66,
+    name: "Mango Chutney",
+    description: "Sweet and tangy mango chutney to complement your meal.",
+    price: 2.49,
+    category: "Chutney",
+  },
+  {
+    id: 67,
+    name: "Gulab Jamun",
+    description: "Deep-fried dough balls soaked in sugary syrup.",
+    price: 3.99,
+    category: "Dessert",
+  },
+  {
+    id: 68,
+    name: "Ras Malai",
+    description: "Soft, spongy milk-based dessert with cardamom and saffron.",
+    price: 4.99,
+    category: "Dessert",
+  },
+  {
+    id: 69,
+    name: "Mango Lassi",
+    description: "Smooth and creamy yogurt drink with mango flavor.",
+    price: 4.99,
+    category: "Drinks",
+  },
+  {
+    id: 70,
+    name: "Sweet Lassi",
+    description: "Refreshing yogurt drink with a sweet, tangy flavor.",
+    price: 3.99,
+    category: "Drinks",
+  },
+  {
+    id: 71,
+    name: "Salted Lassi",
+    description: "Savory yogurt drink with a pinch of salt and spices.",
+    price: 3.99,
+    category: "Drinks",
+  },
+  {
+    id: 72,
+    name: "Masala Chai",
+    description: "Spiced tea brewed with cardamom, ginger, and cinnamon.",
+    price: 2.99,
+    category: "Drinks",
+  },
+  {
+    id: 73,
+    name: "Coffee",
+    description: "Freshly brewed coffee served hot.",
+    price: 2.99,
+    category: "Drinks",
+  },
+  {
+    id: 74,
+    name: "Tea",
+    description: "Hot tea brewed with your choice of spices or plain.",
+    price: 2.99,
+    category: "Drinks",
   },
 ];
-
 const OrderPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -259,14 +773,15 @@ const OrderPage = () => {
               </span>
               <div className="flex items-center space-x-3">
                 <button
-                  className="bg-red-500 text-white px-3 py-1 rounded-full text-sm transition duration-300 hover:bg-red-600"
+                  className="bg-teal-600 text-white px-3 py-1 rounded-full text-sm transition duration-300 hover:bg-teal-700"
                   onClick={() => handleQuantityChange(item.id, -1)}
                 >
                   -
                 </button>
+
                 <span className="text-lg">{quantity[item.id] || 1}</span>
                 <button
-                  className="bg-green-500 text-white px-3 py-1 rounded-full text-sm transition duration-300 hover:bg-green-600"
+                  className="bg-teal-600 text-white px-3 py-1 rounded-full text-sm transition duration-300 hover:bg-teal-700"
                   onClick={() => handleQuantityChange(item.id, 1)}
                 >
                   +
