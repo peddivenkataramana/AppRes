@@ -2,17 +2,18 @@
 
 import { useState, useEffect } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { Link, useLocation, useNavigate } from "react-router-dom"; // Import useNavigate for navigation
-import Logo from "./assessts/Logo1.png"; // Ensure the correct path
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Logo from "./assessts/Logo1.png";
 
 const navigation = [
   { name: "About Us", href: "#aboutus", scrollToCenter: true },
   { name: "Location", href: "#location", scrollToCenter: true },
+  { name: "Contact Us", href: "#footer", scrollToCenter: true }, // Added Contact Us
 ];
 
 function Header() {
-  const location = useLocation(); // Get current location
-  const navigate = useNavigate(); // Used for programmatic navigation
+  const location = useLocation();
+  const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -36,17 +37,12 @@ function Header() {
     e.preventDefault();
 
     if (href.startsWith("/")) {
-      // Route-based navigation
       navigate(href);
     } else if (href.startsWith("#")) {
-      // Scroll to section on the same page
-      const targetId = href.substring(1); // Remove '#' symbol
+      const targetId = href.substring(1);
       const targetSection = document.getElementById(targetId);
       if (targetSection) {
-        targetSection.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-        });
+        targetSection.scrollIntoView({ behavior: "smooth", block: "center" });
       }
     }
 
@@ -55,7 +51,6 @@ function Header() {
 
   const renderNavigation = () => {
     if (location.pathname === "/order") {
-      // For Order Page, show "Hi, for further assistance" and the phone number
       return (
         <>
           <a
@@ -68,7 +63,7 @@ function Header() {
           <div className="text-lg font-semibold text-gray-900">
             <p>For further assistance:</p>
             <a
-              href="tel:+1234567890" // Add your actual phone number
+              href="tel:+1234567890"
               className="text-blue-500 transition duration-200 hover:text-blue-700"
             >
               Phone No: +1 234 567 890
@@ -77,7 +72,6 @@ function Header() {
         </>
       );
     } else if (location.pathname === "/menu") {
-      // For Menu Page, show only "Order Now", "Home", and phone number
       return (
         <>
           <a
@@ -97,7 +91,7 @@ function Header() {
           <div className="text-lg font-semibold text-gray-900">
             <p>For further assistance:</p>
             <a
-              href="tel:+1234567890" // Add your actual phone number
+              href="tel:+1234567890"
               className="text-blue-500 transition duration-200 hover:text-blue-700"
             >
               Phone No: +1 234 567 890
@@ -106,7 +100,6 @@ function Header() {
         </>
       );
     } else if (location.pathname === "/AppRes") {
-      // For Home Page
       return (
         <>
           <a
@@ -129,7 +122,6 @@ function Header() {
         </>
       );
     } else {
-      // For Other Pages
       return navigation.map((item) => (
         <a
           key={item.name}
@@ -197,7 +189,6 @@ function Header() {
         </div>
       </header>
 
-      {/* Full-Screen Mobile Menu */}
       <Dialog
         open={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}

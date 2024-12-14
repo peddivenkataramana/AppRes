@@ -160,7 +160,7 @@ const OrderPage = () => {
       alert("Customer name and phone number are required.");
       return;
     }
-
+    const orderId = `ORD-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
     const items = Object.values(orderItems);
     const totalPrice = items.reduce(
       (total, item) => total + item.price * item.quantity,
@@ -171,6 +171,7 @@ const OrderPage = () => {
     const finalTotal = totalPrice + taxAmount;
 
     const orderData = {
+      orderId,
       customerName,
       customerPhone,
       items,
