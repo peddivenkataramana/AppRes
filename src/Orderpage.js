@@ -7,7 +7,6 @@ const categories = [
   "Platter",
   "Veg Spl",
   "Goat Spl",
-<<<<<<< HEAD
   "Lamb Spl",
   "Chicken Spl",
   "Shrimp Spl",
@@ -17,17 +16,6 @@ const categories = [
   "Breads",
   "Chutney (Indian Sauce)",
   "Dessert",
-=======
-"Lamb Spl",
-"Biryani Spl",
-"Shrimp Spl",
-"Biryani Spl",
-"Drinks",  
-"Kids Spl",
-"Breads",
-"Chutney (Indian Sauce)",
-"Dessert",
->>>>>>> c5a6146a3462fd4c516d53b6066f389cda2982ef
   "Drinks",
 ];
 
@@ -35,23 +23,15 @@ const menuItems = [
   {
     id: 1,
     name: "Samosa",
-<<<<<<< HEAD
     description: "Crispy pastry pockets filled with spiced potatoes and peas.",
-=======
-    description: "Tender chicken in a creamy tomato sauce.",
->>>>>>> c5a6146a3462fd4c516d53b6066f389cda2982ef
     price: 2.49,
     category: "Appetizers",
   },
   {
     id: 2,
     name: "Samosa Chaat",
-<<<<<<< HEAD
     description:
       "Crispy samosas topped with tangy yogurt, chutneys, and chickpeas.",
-=======
-    description: "Paneer cooked in a rich, buttery gravy.",
->>>>>>> c5a6146a3462fd4c516d53b6066f389cda2982ef
     price: 8.99,
     category: "Appetizers",
   },
@@ -59,57 +39,36 @@ const menuItems = [
     id: 3,
     name: "Mix Vegetable Pakora",
     description:
-<<<<<<< HEAD
       "Crispy fried fritters made with a blend of mixed vegetables and spices.",
     price: 8.99,
-=======
-      "Aromatic basmati rice cooked with mixed vegetables and spices.",
-    price: ,
->>>>>>> c5a6146a3462fd4c516d53b6066f389cda2982ef
     category: "Appetizers",
   },
   {
     id: 4,
-<<<<<<< HEAD
     name: "Paneer Pakora",
     description:
       "Fried chunks of paneer (Indian cheese) dipped in a spiced chickpea batter.",
-=======
-    name: "Panner Pakora",
-    description: "Crispy pastries filled with spiced potatoes.",
->>>>>>> c5a6146a3462fd4c516d53b6066f389cda2982ef
     price: 10.99,
     category: "Appetizers",
   },
   {
     id: 5,
-<<<<<<< HEAD
     name: "Aloo Tikki Chaat",
     description:
       "Spicy potato patties topped with yogurt, tamarind chutney, and sev.",
-=======
-    name: "Aloo Tikki Chat",
-    description: "Sweet fried dough balls soaked in syrup.",
->>>>>>> c5a6146a3462fd4c516d53b6066f389cda2982ef
     price: 8.99,
     category: "Appetizers",
   },
   {
     id: 6,
     name: "Pani Puri",
-<<<<<<< HEAD
     description:
       "Crispy puris filled with tangy tamarind water, chickpeas, and potatoes.",
     price: 8.99,
-=======
-    description: "Creamy yogurt drink with mango.",
-    price: ,
->>>>>>> c5a6146a3462fd4c516d53b6066f389cda2982ef
     category: "Appetizers",
   },
   {
     id: 7,
-<<<<<<< HEAD
     name: "Chicken Wings",
     description:
       "Crispy fried chicken wings seasoned with spices and served with a tangy sauce.",
@@ -609,422 +568,7 @@ const menuItems = [
     description: "Hot tea brewed with your choice of spices or plain.",
     price: 2.99,
     category: "Drinks",
-=======
-    name: "Chicken Wings (Fry)",
-    description: "Creamy yogurt drink with mango.",
-    price: 10.99,
-    category: "Appetizers",
-  },{
-    id: 8,
-    name: "Chicken Pakora",
-    description: "Creamy yogurt drink with mango.",
-    price: 11.99,
-    category: "Appetizers",
-  },{
-    id: 9,
-    name: "Chicken 65",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99 ,
-    category: "Appetizers",
-  },{
-    id: 10,
-    name: "Fish Pakora",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Appetizers",
   },
-{
-    id: 11,
-    name: "Vegetable Korma",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Platter",
-  },
-{
-    id: 12,
-    name: "Butter Chicken",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Platter",
-  },{
-    id: 13,
-    name: "Panner Makhani",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Platter",
-  },{
-    id: 14,
-    name: "Chicken Korma",
-    description: "Creamy yogurt drink with mango.",
-    price: 3.99,
-    category: "Platter",
-  },{
-    id: 14,
-    name: "Chicken Korma",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Platter",
-  },{
-    id: 15,
-    name: "Chana Masala",
-    description: "Creamy yogurt drink with mango.",
-    price: 14.99,
-    category: "Platter",
-  },{
-    id: 16,
-    name: "Chicken Curry",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Platter",
-  },{
-    id: 17,
-    name: "Dal Tadka",
-    description: "Creamy yogurt drink with mango.",
-    price: 14.99,
-    category: "Platter",
-  },{
-    id: 18,
-    name: "Aloo Mutter",
-    description: "Creamy yogurt drink with mango.",
-    price: 14.99,
-    category: Veg Spl,
-  },{
-    id: 19,
-    name: "Panner Makhani",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: Veg Spl,
-  },{
-    id: 20,
-    name: "Kadhai Panner",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: Veg Spl,
-  },{
-    id: 21,
-    name: "Palak Panner",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: Veg Spl,
-  },{
-    id: 22,
-    name: "Mutter Panner",
-    description: "Creamy yogurt drink with mango.",
-    price: 14.99,
-    category: Veg Spl,
-  },{
-    id: 23,
-    name: "Chilli Panner",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: Veg Spl,
-  },{
-    id: 24,
-    name: "Panner Tikka Masala",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: Veg Spl,
-  },{
-    id: 25,
-    name: "Vegetable Korma",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: Veg Spl,
-  },{
-    id: 26,
-    name: "Mix Vegetable",
-    description: "Creamy yogurt drink with mango.",
-    price: 14.99,
-    category: Veg Spl,
-  },{
-    id: 27,
-    name: "Malai Kofta",
-    description: "Creamy yogurt drink with mango.",
-    price: 14.99,
-    category: Veg Spl,
-  },{
-    id: 28,
-    name: "Kadhi Pakoda",
-    description: "Creamy yogurt drink with mango.",
-    price: 14.99,
-    category: Veg Spl,
-  },{
-    id: 29,
-    name: "Chana Masala",
-    description: "Creamy yogurt drink with mango.",
-    price: 14.99,
-    category: Veg Spl,
-  },{
-    id: 30,
-    name: "Puri Chole",
-    description: "Creamy yogurt drink with mango.",
-    price: 12.99,
-    category: Veg Spl,
-  },{
-    id: 31,
-    name: "Goat Curry",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category: "Goat Spl",
-  },{
-    id: 32,
-    name: "Goat Vindaloo",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category: "Goat Spl",
-  },{
-    id: 33,
-    name: "Goat Rogan Josh",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category: "Goat Spl",
-  },{
-    id: 34,
-    name: "Kadai Goat",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category: "Goat Spl",
-  },{
-    id: 35,
-    name: "Bhuna Goat",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category: "Goat Spl",
-  },{
-    id: 36,
-    name: "Lamb Curry",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category: "Lamb Spl",
-  },{
-    id: 37,
-    name: "Lamb Vindaloo",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category:  "Lamb Spl",
-  },{
-    id: 38,
-    name: "Lamb Rogan Josh",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category:  "Lamb Spl",
-  },{
-    id: 39,
-    name: "Lamb Saag",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category:  "Lamb Spl",
-  },{
-    id: 40,
-    name: "Butter Chicken",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Biryani Spl",
-  },{
-    id: 41,
-    name: "Chicken Tikka Masala",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Biryani Spl",
->>>>>>> c5a6146a3462fd4c516d53b6066f389cda2982ef
-  },
-{
-    id: 42,
-    name: "Chicken Curry",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Biryani Spl",
-  },
-{
-    id: 43,
-    name: "Chicken Vindaloo",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Chicken Spl",
-  },
-{
-    id: 44,
-    name: "Chicken Rogan Josh",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Chicken Spl",
-  },
-{
-    id: 45,
-    name: "Chicken Korma",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Chicken Spl",
-  },
-{
-    id: 46,
-    name: "Kadai Chicken",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Chicken Spl",
-  },
-{
-    id: 47,
-    name: "Saag Chicken",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Chicken Spl",
-  },
-{
-    id: 48,
-    name: "Chilli Chicken",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Chicken Spl",
-  },
-{
-    id: 49,
-    name: "Tandoori Chicken",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Chicken Spl",
-  },{
-    id: 50,
-    name: "Shrimp Curry",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category: "Shrimp Spl",
-  },{
-    id: 51,
-    name: "Shrimp Tikka Masala",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category: "Shrimp Spl",
-  },{
-    id: 52,
-    name: "Shrimp Chilly",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category: "Shrimp Spl",
-  },{
-    id: 53,
-    name: "Vegetable Biryani",
-    description: "Creamy yogurt drink with mango.",
-    price: 14.99,
-    category: "Biryani Spl",
-  },{
-    id: 54,
-    name: "Chicken Biryani",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Biryani Spl",
-  },{
-    id: 55,
-    name: "Goat Biryani",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category: "Biryani Spl",
-  },{
-    id: 56,
-    name: "Lamb Biryani",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category: "Biryani Spl",
-  },{
-    id: 57,
-    name: "Shrimp Biryani",
-    description: "Creamy yogurt drink with mango.",
-    price: 18.99,
-    category: "Biryani Spl",
-  },{
-    id: 58,
-    name: "Chicken Over Rice",
-    description: "Creamy yogurt drink with mango.",
-    price: 14.99,
-    category: "Curry Xpress Spl",
-  },{
-    id: 59,
-    name: "Rice And 1 Entree & Drink",
-    description: "Creamy yogurt drink with mango.",
-    price: 14.99,
-    category: "Kids Spl",
-  },{
-    id: 60,
-    name: "Plain Naan",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Breads",
-  },{
-    id: 61,
-    name: "Garlic Naan",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Breads",
-  },{
-    id: 62,
-    name: "Tawa Roti",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Breads",
-  },{
-    id: 63,
-    name: "Plain Prantha",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Breads",
-  },{
-    id: 64,
-    name: "Aloo Prantha",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Breads",
-  },{
-    id: 65,
-    name: "Paneer Prantha",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Breads",
-  },{
-    id: 66,
-    name: "Mango Chutney",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Chutney",
-  },{
-    id: 67,
-    name: "Gulab Jamun",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Dessert",
-  },{
-    id: 68,
-    name: "Ras Mala",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Dessert",
-  },{
-    id: 69,
-    name: "Mango Lassi",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Drinks",
-  },{
-    id: 70,
-    name: "Thums Up, Limca",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Drinks",
-  },{
-    id: 71,
-    name: "Soda",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Drinks",
-  },{
-    id: 72,
-    name: "Masala Tea",
-    description: "Creamy yogurt drink with mango.",
-    price: 15.99,
-    category: "Drinks",
-  },
-
-
-
 ];
 const OrderPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
